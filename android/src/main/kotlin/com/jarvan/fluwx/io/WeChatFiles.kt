@@ -87,7 +87,7 @@ private class WeChatNetworkFile(override val source: Any, override val suffix: S
         val request: Request = Request.Builder().url(internalSource).get().build()
         try {
             val response = okHttpClient.newCall(request).execute()
-            val responseBody = response.body
+            val responseBody = response.body()
             if (response.isSuccessful && responseBody != null) {
                 responseBody.bytes()
             } else {
