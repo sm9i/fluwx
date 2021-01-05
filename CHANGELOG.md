@@ -1,3 +1,26 @@
+## 2.5.0+1
+* Fix trailing , issue.
+
+## 2.5.0
+* App获取开放标签<wx-open-launch-app>中的extinfo数据
+
+## 2.4.2
+* Fix #317
+
+## 2.4.1
+* 修复Android 11无法分享图片的问题
+
+## 2.4.0
+* 支持compressThumbnail
+* 升级OkHttp
+
+## 2.3.0
+* 适配Flutter 1.20
+* 升级Android的Gradle以及更库的版本
+
+## 2.2.0
+* Merged #249
+
 ## 2.1.0
 * Specifying supported platforms
 * Fix: Android分享小程序时，缩略图压缩过重的问题

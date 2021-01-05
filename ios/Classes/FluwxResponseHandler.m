@@ -188,7 +188,7 @@ FlutterMethodChannel *fluwxMethodChannel = nil;
                 @"businessType": @(businessResp.businessType),
         };
 
-        [fluwxMethodChannel invokeMethod:@"onAutoDeductResponse" arguments:result];
+        [fluwxMethodChannel invokeMethod:@"onWXOpenBusinessWebviewResponse" arguments:result];
     }
 }
 
@@ -212,5 +212,10 @@ FlutterMethodChannel *fluwxMethodChannel = nil;
             [_delegate managerDidRecvLaunchFromWXReq:launchReq];
         }
     }
+    LaunchFromWXReq *launchFromWXReq = (LaunchFromWXReq *) req;
+    NSDictionary *result = @{
+            @"extMsg": launchFromWXReq.message.messageExt
+    };
+    [fluwxMethodChannel invokeMethod:@"onWXShowMessageFromWX" arguments:result];
 }
 @end
